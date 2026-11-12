@@ -1,0 +1,23 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "fraunces",
+        "createdAt": "2026-11-08T22:52:24.094Z",
+        "reason": "Existing display typeface is part of the established portfolio identity and is retained for consistency."
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-08T22:56:14.314Z",
+        "reason": "Attribution-unknown finding is stale: current WhatsApp CTA shadow is neutral black, while #25d366 is only its brand fill."
+      }
+    ]
+  }
+}
