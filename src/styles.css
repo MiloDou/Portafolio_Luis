@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..700&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&display=swap');
-
 :root {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #191919;
@@ -3038,7 +3036,7 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.1em;
   color: var(--wine);
 }
-.hero-branch-card h3 {
+.hero-branch-card h2 {
   margin: 2px 0 4px;
   font-family: 'Fraunces', serif;
   font-size: 18px;
@@ -3886,7 +3884,7 @@ img { display: block; max-width: 100%; }
   .pricing-custom-cta-box { flex-direction: column; align-items: flex-start; }
 }
 
-/* Witchuart · sistema carbón, gris y cian */
+/* Witchu · sistema carbón, gris y cian */
 :root {
   --cream: #f3f4f4;
   --cream-alt: #e7e9e9;

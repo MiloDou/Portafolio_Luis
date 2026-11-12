@@ -1,4 +1,4 @@
-# Sistema visual · Witchuart
+# Sistema visual · Witchu
 
 El portafolio mantiene las piezas y la personalidad ilustrada de Witchu dentro de una interfaz ordenada y legible. La portada interactiva revela la página entre los dientes del personaje; su invitación aparece después de 12 segundos. El recorrido principal sigue Mirlo: presentación, servicios, galería/portafolio, paquetes, proceso y contacto. La galería de ilustración y los encargos son una rama secundaria accesible desde el inicio y la navegación.
 

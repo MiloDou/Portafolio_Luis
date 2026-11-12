@@ -9,5 +9,9 @@
     "postinstall": "node build.mjs",
     "preview": "node server.mjs --dist",
     "deploy": "npm run build && npx wrangler deploy"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   }
 }

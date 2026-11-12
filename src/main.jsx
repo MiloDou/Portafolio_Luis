@@ -350,7 +350,7 @@ function Header({ currentBranch, onNavigateBranch }) {
       >
         <span className="brand-dot"><img src="/assets/witchu-logo.png" alt="Witchu logo" /></span>
         <span className="brand-text">
-          <strong>Witchuart - Portafolio Artístico</strong>
+          <strong>Witchu - Portafolio Artístico</strong>
           <small>LUIS GÓMEZ · DISEÑO, VIDEO E ILUSTRACIÓN</small>
         </span>
       </a>
@@ -407,6 +407,7 @@ function Header({ currentBranch, onNavigateBranch }) {
 // SECCIÓN 0: PORTADA INTERACTIVA
 function InteractiveCover({ onEnter }) {
   const coverRef = useRef(null);
+  const enterButtonRef = useRef(null);
   const [leaving, setLeaving] = useState(false);
   const [prompt, setPrompt] = useState(false);
 
@@ -417,6 +418,7 @@ function InteractiveCover({ onEnter }) {
   };
 
   useEffect(() => {
+    enterButtonRef.current?.focus();
     document.documentElement.classList.add('has-interactive-cover');
     document.body.classList.add('has-interactive-cover');
     const previousOverflow = document.body.style.overflow;
@@ -481,6 +483,7 @@ function InteractiveCover({ onEnter }) {
           </div>
         )}
         <button
+          ref={enterButtonRef}
           className="cover-mouth-hitbox"
           type="button"
           onClick={finish}
@@ -498,7 +501,7 @@ function Hero({ onOpenIllustration }) {
       <div className="hero-bg-glow" aria-hidden="true" />
 
       <div className="hero-copy">
-        <h1>
+        <h1 tabIndex={-1}>
           <span>Ideas claras.</span>
           <span>Diseño con <em>carácter.</em></span>
         </h1>
@@ -529,7 +532,7 @@ function Hero({ onOpenIllustration }) {
           </div>
           <div className="branch-card-content">
             <span className="branch-card-eyebrow">RAMA SECUNDARIA</span>
-            <h3>Trazos con personalidad</h3>
+            <h2>Trazos con personalidad</h2>
             <p>Explora mi galería de personajes, cómics originales y encargos de ilustración.</p>
           </div>
           <button
@@ -657,6 +660,27 @@ function Services() {
 
 // Lightbox Modal para ampliar piezas de trabajo
 function WorkModal({ item, onClose, onPrev, onNext }) {
+  const modalRef = useRef(null);
+  useEffect(() => {
+    const previousFocus = document.activeElement;
+    modalRef.current?.querySelector('.modal-close-btn')?.focus();
+    return () => previousFocus?.focus();
+  }, []);
+
+  const keepFocusInside = (event) => {
+    if (event.key !== 'Tab') return;
+    const controls = [...modalRef.current.querySelectorAll('button, a[href]')];
+    const first = controls[0];
+    const last = controls[controls.length - 1];
+    if (!first || !last) return;
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
   useEffect(() => {
     if (!item) return undefined;
     const handleKey = (e) => {
@@ -677,7 +701,7 @@ function WorkModal({ item, onClose, onPrev, onNext }) {
   const whatsappText = `¡Hola Luis! Vi la pieza "${item.title}" (${item.category || 'portafolio'}) en tu sitio y me interesa cotizar un diseño similar para mi proyecto.`;
 
   return (
-    <div className="work-modal-backdrop" onClick={onClose} role="dialog" aria-modal="true" aria-label={item.title}>
+    <div ref={modalRef} className="work-modal-backdrop" onClick={onClose} onKeyDown={keepFocusInside} role="dialog" aria-modal="true" aria-label={item.title}>
       <div className="work-modal-card" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close-btn" onClick={onClose} aria-label="Cerrar vista detallada">✕</button>
 
@@ -1438,9 +1462,14 @@ function IllustrationBranch({ onBack }) {
 // Aplicación Principal
 function App() {
   const [coverOpen, setCoverOpen] = useState(true);
-  const [currentBranch, setCurrentBranch] = useState(() => {
-    return window.location.hash === '#ilustracion' ? 'illustration' : 'main';
-  });
+  const [currentBranch, setCurrentBranch] = useState('main');
+
+  useEffect(() => {
+    const content = document.querySelectorAll('.site-header, main');
+    content.forEach((element) => { element.inert = coverOpen; });
+    if (!coverOpen) document.querySelector('main h1')?.focus();
+    return () => content.forEach((element) => { element.inert = false; });
+  }, [coverOpen]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -1468,6 +1497,7 @@ function App() {
       }
     };
     window.addEventListener('hashchange', handleHashChange);
+    if (window.location.hash === '#ilustracion') handleHashChange();
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
@@ -1522,8 +1552,10 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const root = document.getElementById('root');
+const app = <React.StrictMode><App /></React.StrictMode>;
+if (root.hasAttribute('data-prerendered')) {
+  ReactDOM.hydrateRoot(root, app);
+} else {
+  ReactDOM.createRoot(root).render(app);
+}
