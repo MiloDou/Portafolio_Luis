@@ -620,7 +620,6 @@ function Services() {
   return (
     <section className="services-section reveal-section" id="servicios">
       <div className="services-intro">
-        <span className="services-eyebrow">DISEÑO, CONTENIDO & COMUNICACIÓN</span>
         <h2>¿Qué puedo hacer<br />por tu marca?</h2>
         <p className="services-subhead"><strong>Soluciones para redes sociales</strong></p>
         <p>
@@ -1060,10 +1059,6 @@ function Pricing() {
     <section className="pricing-section reveal-section" id="paquetes">
       <div className="pricing-container">
         <div className="pricing-header">
-          <div className="pricing-kicker">
-            <span className="live-dot" />
-            <span>SOLUCIONES MENSUALES PARA TU NEGOCIO</span>
-          </div>
           <h2>Paquetes para redes sociales</h2>
           <p>
             Planes claros para dar constancia, dinamismo y profesionalismo a tu presencia digital. Elige el paquete que responda a tus necesidades actuales.
@@ -1221,7 +1216,6 @@ function Process() {
   return (
     <section className="process-section reveal-section" id="proceso">
       <div className="process-heading">
-        <span className="process-kicker">METODOLOGÍA DE TRABAJO</span>
         <h2>Tú, yo y<br /><em>el proceso.</em></h2>
         <p className="process-subhead"><strong>De tu idea al resultado final.</strong></p>
         <p>
@@ -1277,10 +1271,6 @@ function Contact() {
       </div>
 
       <div className="contact-content">
-        <p className="contact-kicker">
-          <span className="live-dot" /> CONTACTO DIRECTO
-        </p>
-
         <h2>Que tu marca<br /><em>no pase desapercibida.</em></h2>
 
         <p className="contact-description">

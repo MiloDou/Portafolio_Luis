@@ -19,6 +19,7 @@ const Babel = babelContext.Babel;
 await rm(dist, { recursive: true, force: true });
 await mkdir(resolve(dist, 'src'), { recursive: true });
 await cp(resolve(root, 'public/assets'), resolve(dist, 'assets'), { recursive: true });
+await cp(resolve(root, 'public/fonts'), resolve(dist, 'fonts'), { recursive: true });
 await cp(resolve(root, 'public/vendor'), resolve(dist, 'vendor'), { recursive: true });
 await cp(resolve(root, 'src/styles.css'), resolve(dist, 'src/styles.css'));
 await cp(resolve(root, 'src/content.js'), resolve(dist, 'src/content.js'));

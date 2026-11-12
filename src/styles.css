@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'New Rocker';
+  src: url('/fonts/NewRocker-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'New Rocker', Georgia, serif;
   color: #191919;
   background: #ffffff;
   font-synthesis: none;
@@ -47,6 +55,7 @@ body, button, a { -webkit-tap-highlight-color: transparent; }
 button, a { color: inherit; }
 a { text-decoration: none; }
 button { font: inherit; cursor: pointer; border: none; background: none; }
+input, select, textarea { font: inherit; }
 body { caret-color: var(--wine); }
 html.has-interactive-cover,
 body.has-interactive-cover { overflow: hidden; background: #01e7f5; }
@@ -270,7 +279,7 @@ img { display: block; max-width: 100%; }
 .brand-mark-star { width: 17px; height: 17px; fill: var(--pink); }
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-text strong {
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.05em;
@@ -425,7 +434,7 @@ img { display: block; max-width: 100%; }
 }
 .hero h1 {
   margin: 16px 0 20px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 0.94;
@@ -466,17 +475,10 @@ img { display: block; max-width: 100%; }
   background: var(--mint);
 }
 .services-intro { max-width: 500px; justify-self: end; }
-.services-eyebrow,
-.process-heading > span {
-  color: var(--wine-dark);
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: .16em;
-}
 .services-intro h2,
 .process-heading h2 {
   margin: 18px 0;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(48px, 6.4vw, 82px);
   line-height: .94;
   letter-spacing: -.04em;
@@ -496,7 +498,7 @@ img { display: block; max-width: 100%; }
 .services-list a:first-child { border-top: 1px solid rgba(40,36,35,.27); }
 .services-list a:hover { transform: translateX(8px); color: var(--wine-dark); }
 .service-number { font-size: 10px; font-weight: 900; color: var(--wine-dark); }
-.services-list strong { font-family: 'Fraunces', serif; font-size: clamp(17px, 2vw, 24px); }
+.services-list strong { font-family: 'New Rocker', Georgia, serif; font-size: clamp(17px, 2vw, 24px); }
 .services-list .arrow-icon { width: 16px; height: 16px; }
 
 .illustration-section {
@@ -513,7 +515,7 @@ img { display: block; max-width: 100%; }
 .illustration-heading h2 {
   max-width: 800px;
   margin: 0;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(52px, 7vw, 92px);
   line-height: .96;
   letter-spacing: -.04em;
@@ -540,7 +542,7 @@ img { display: block; max-width: 100%; }
   padding-top: 30px;
   border-top: 1px solid var(--ink);
 }
-.illustration-commission h3 { margin: 0 0 8px; font-family: 'Fraunces', serif; font-size: clamp(30px, 3vw, 44px); }
+.illustration-commission h3 { margin: 0 0 8px; font-family: 'New Rocker', Georgia, serif; font-size: clamp(30px, 3vw, 44px); }
 .illustration-commission p { margin: 0; color: var(--ink-soft); line-height: 1.6; }
 
 .hero-actions {
@@ -719,7 +721,7 @@ img { display: block; max-width: 100%; }
 }
 .process-steps li { display: flex; gap: 16px; min-height: 190px; padding: 24px 20px; background: var(--cream-alt); }
 .process-step-number { flex: 0 0 auto; color: var(--wine); font-size: 11px; font-weight: 900; }
-.process-steps h3 { margin: 0 0 10px; font-family: 'Fraunces', serif; font-size: 21px; }
+.process-steps h3 { margin: 0 0 10px; font-family: 'New Rocker', Georgia, serif; font-size: 21px; }
 .process-steps p { margin: 0; color: var(--ink-soft); font-size: 12px; line-height: 1.65; }
 .reveal-section {
   opacity: 1;
@@ -735,7 +737,7 @@ img { display: block; max-width: 100%; }
 .about-title { position: relative; align-self: center; }
 .about-scribble {
   color: var(--pink);
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 28px;
   font-weight: 700;
   transform: rotate(-8deg);
@@ -743,7 +745,7 @@ img { display: block; max-width: 100%; }
 }
 .about-title h2 {
   margin: 10px 0 20px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(56px, 7.5vw, 92px);
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -787,7 +789,7 @@ img { display: block; max-width: 100%; }
 .about-text .about-lede {
   margin-top: 0;
   color: var(--ink);
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(20px, 2.2vw, 28px);
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -915,7 +917,7 @@ img { display: block; max-width: 100%; }
 .work-heading-row h2 {
   margin: 0;
   max-width: 680px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(52px, 6.8vw, 88px);
   line-height: 0.95;
   letter-spacing: -0.04em;
@@ -1061,7 +1063,7 @@ img { display: block; max-width: 100%; }
 }
 .work-meta h3 {
   margin: 6px 0 0;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(22px, 2.5vw, 34px);
   letter-spacing: -0.03em;
   color: #fff;
@@ -1224,7 +1226,7 @@ img { display: block; max-width: 100%; }
 }
 .modal-title {
   margin: 0 0 6px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(26px, 3.2vw, 38px);
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -1387,7 +1389,7 @@ img { display: block; max-width: 100%; }
 }
 .mockup-header-row h2 {
   margin: 0 0 16px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(48px, 6vw, 76px);
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -1723,7 +1725,7 @@ img { display: block; max-width: 100%; }
 }
 .canva-intro h2 {
   margin: 0;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(48px, 6.2vw, 84px);
   line-height: 0.95;
   letter-spacing: -0.04em;
@@ -1806,7 +1808,7 @@ img { display: block; max-width: 100%; }
   opacity: 0.8;
 }
 .canva-artboard-title {
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(28px, 3.2vw, 42px);
   font-weight: 800;
   line-height: 0.95;
@@ -1859,7 +1861,7 @@ img { display: block; max-width: 100%; }
 }
 .canva-project-copy h3 {
   margin: 4px 0 0;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(20px, 2.3vw, 28px);
   letter-spacing: -0.03em;
 }
@@ -1897,19 +1899,9 @@ img { display: block; max-width: 100%; }
   max-width: 700px;
   margin-bottom: 45px;
 }
-.pricing-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  color: var(--wine);
-  margin-bottom: 12px;
-}
 .pricing-header h2 {
   margin: 0 0 16px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(48px, 6vw, 80px);
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -1957,7 +1949,7 @@ img { display: block; max-width: 100%; }
   flex-direction: column;
 }
 .tab-name {
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 22px;
   font-weight: 800;
 }
@@ -2014,7 +2006,7 @@ img { display: block; max-width: 100%; }
 }
 .kit-detail-header h3 {
   margin: 0 0 6px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(32px, 4vw, 48px);
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -2039,7 +2031,7 @@ img { display: block; max-width: 100%; }
 }
 .kit-base-price strong {
   display: block;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 42px;
   font-weight: 800;
   color: var(--wine);
@@ -2156,7 +2148,7 @@ img { display: block; max-width: 100%; }
   color: var(--lime);
 }
 .total-row strong {
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 34px;
   font-weight: 800;
   color: #fff;
@@ -2226,24 +2218,9 @@ img { display: block; max-width: 100%; }
   margin-inline: auto;
   text-align: center;
 }
-.contact-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: #ffe0e9;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  margin-bottom: 14px;
-}
-.contact-kicker span {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--lime);
-}
 .contact-content h2 {
   margin: 12px 0 18px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(56px, 8vw, 98px);
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -2354,7 +2331,7 @@ img { display: block; max-width: 100%; }
   border-radius: 50%;
   color: var(--wine);
   background: var(--mint);
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 13px;
   font-weight: 800;
   line-height: 1.15;
@@ -2432,7 +2409,7 @@ img { display: block; max-width: 100%; }
 }
 .reel-work-item h3 {
   margin: 8px 0;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(20px, 2vw, 28px);
   line-height: 1.12;
 }
@@ -2447,7 +2424,7 @@ img { display: block; max-width: 100%; }
 .pdf-archive-heading { max-width: 780px; margin-bottom: 38px; }
 .pdf-archive-heading h2 {
   margin: 0 0 16px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(38px, 6vw, 76px);
   font-weight: 700;
   line-height: .98;
@@ -2470,7 +2447,7 @@ img { display: block; max-width: 100%; }
 .pdf-archive-group > summary::after { content: '+'; color: var(--wine); font-size: 26px; font-weight: 400; }
 .pdf-archive-group[open] > summary::after { content: '−'; }
 .pdf-archive-group > summary > span:first-child { display: grid; gap: 5px; }
-.pdf-archive-group > summary strong { font-family: 'Fraunces', serif; font-size: clamp(20px, 2.8vw, 28px); }
+.pdf-archive-group > summary strong { font-family: 'New Rocker', Georgia, serif; font-size: clamp(20px, 2.8vw, 28px); }
 .pdf-archive-group > summary small { color: var(--ink-soft); font-size: 13px; }
 .pdf-page-count { white-space: nowrap; color: var(--wine); font-size: 12px; font-weight: 800; }
 .pdf-page-grid {
@@ -2707,7 +2684,7 @@ img { display: block; max-width: 100%; }
 .video-reels-heading h2 {
   max-width: 780px;
   margin: 12px 0 0;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(46px, 6vw, 88px);
   font-weight: 800;
   line-height: .96;
@@ -2771,7 +2748,7 @@ img { display: block; max-width: 100%; }
 
 .video-reels-caption h3 {
   margin: 6px 0 0;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(20px, 2vw, 27px);
   line-height: 1.14;
 }
@@ -2858,7 +2835,7 @@ img { display: block; max-width: 100%; }
 
 .identity-gallery__heading h2 em {
   color: var(--pink);
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-weight: 500;
 }
 
@@ -3038,7 +3015,7 @@ img { display: block; max-width: 100%; }
 }
 .hero-branch-card h2 {
   margin: 2px 0 4px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 18px;
   font-weight: 800;
   color: var(--ink);
@@ -3134,7 +3111,7 @@ img { display: block; max-width: 100%; }
 }
 .service-item-top strong {
   flex: 1;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(18px, 2vw, 24px);
   color: var(--ink);
 }
@@ -3168,7 +3145,7 @@ img { display: block; max-width: 100%; }
   margin-bottom: 10px;
 }
 .portfolio-header h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(40px, 5.5vw, 72px);
   margin: 0 0 16px;
   letter-spacing: -0.03em;
@@ -3299,7 +3276,7 @@ img { display: block; max-width: 100%; }
 }
 .post-card-meta h3 {
   margin: 0 0 8px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 18px;
   font-weight: 800;
   color: var(--ink);
@@ -3365,7 +3342,7 @@ img { display: block; max-width: 100%; }
 }
 .identity-project-heading h3 {
   margin: 4px 0 0;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 24px;
   color: var(--ink);
 }
@@ -3392,7 +3369,7 @@ img { display: block; max-width: 100%; }
 }
 .portfolio-reels-cta-banner h3 {
   margin: 0 0 6px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 22px;
   color: var(--ink);
 }
@@ -3459,7 +3436,7 @@ img { display: block; max-width: 100%; }
 }
 .pricing-kit-name {
   margin: 0 0 6px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 22px;
   font-weight: 800;
   color: var(--ink);
@@ -3480,7 +3457,7 @@ img { display: block; max-width: 100%; }
   gap: 6px;
 }
 .price-amount {
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 34px;
   font-weight: 800;
   color: var(--wine);
@@ -3581,7 +3558,7 @@ img { display: block; max-width: 100%; }
 }
 .custom-cta-text h3 {
   margin: 0 0 6px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(20px, 2.5vw, 26px);
   color: var(--lime);
 }
@@ -3605,7 +3582,7 @@ img { display: block; max-width: 100%; }
 }
 .conditions-header h4 {
   margin: 0 0 4px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 20px;
   color: var(--ink);
 }
@@ -3676,7 +3653,7 @@ img { display: block; max-width: 100%; }
   border-radius: 12px;
   background: var(--ink);
   color: var(--lime);
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 18px;
   font-weight: 800;
   display: flex;
@@ -3686,7 +3663,7 @@ img { display: block; max-width: 100%; }
 }
 .process-timeline-content h3 {
   margin: 0 0 8px;
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 19px;
   font-weight: 800;
   color: var(--ink);
@@ -3756,7 +3733,7 @@ img { display: block; max-width: 100%; }
   text-align: center;
 }
 .illustration-branch-header h1 {
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(44px, 6vw, 84px);
   margin: 8px 0 16px;
   letter-spacing: -0.04em;
@@ -3843,7 +3820,7 @@ img { display: block; max-width: 100%; }
   color: var(--wine);
 }
 .commissions-copy h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: clamp(32px, 4vw, 48px);
   margin: 6px 0 12px;
   color: var(--ink);
@@ -3921,7 +3898,7 @@ html { scrollbar-color: #00aebe #e7e9e9; }
   backdrop-filter: blur(12px);
 }
 .brand-dot { border-radius: 10px; border: 0; }
-.brand-text strong { font-family: 'DM Sans', sans-serif; font-size: 16px; letter-spacing: -.03em; }
+.brand-text strong { font-family: 'New Rocker', Georgia, serif; font-size: 16px; letter-spacing: -.03em; }
 .brand-text strong { font-size: clamp(11px, 1.15vw, 15px); white-space: nowrap; }
 .brand-text small { font-size: 10px; letter-spacing: .1em; color: #505657; }
 .header-status-pill { background: #e1f5f6; border-color: #9cdde1; color: #075c63; }
@@ -3973,7 +3950,6 @@ html { scrollbar-color: #00aebe #e7e9e9; }
 }
 .services-intro h2, .services-intro p, .services-intro .services-subhead { color: #f3f4f4; }
 .services-intro h2 { font-size: clamp(40px, 5vw, 66px); }
-.services-intro .services-eyebrow { color: #a8eaf0; }
 .service-item-card { border-color: rgba(243, 244, 244, .24); }
 .service-item-top strong, .service-desc { color: #f3f4f4; }
 .service-number, .service-arrow { color: #a8eaf0; }
@@ -4030,7 +4006,6 @@ html { scrollbar-color: #00aebe #e7e9e9; }
 .contact-section { background: #141718; }
 .contact-content h2 { color: #f3f4f4; }
 .contact-description { color: #c5cccc; }
-.contact-kicker { color: #a8eaf0; }
 .contact-chip, .contact-chip-btn { border-radius: 7px; }
 .site-footer { background: #0c0e0f; color: #d9dede; }
 .work-modal-backdrop { backdrop-filter: blur(6px); background: rgba(8, 11, 12, .82); }
@@ -4151,12 +4126,8 @@ button.channel-box:hover, a.channel-box:hover { border-color: #00c7d8; backgroun
   .footer-brand, .footer-tagline, .footer-top-link, .site-footer small { grid-column: 1; grid-row: auto; justify-self: start; text-align: left; }
 }
 
-/* Section labels share one compact badge treatment. */
-.services-eyebrow,
-.portfolio-kicker,
-.pricing-kicker,
-.process-kicker,
-.contact-kicker {
+/* Portfolio section label. */
+.portfolio-kicker {
   display: inline-flex;
   align-items: center;
   gap: 9px;
@@ -4167,23 +4138,14 @@ button.channel-box:hover, a.channel-box:hover { border-color: #00c7d8; backgroun
   border-radius: 999px;
   background: #dff5f5;
   color: #075c63;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'New Rocker', Georgia, serif;
   font-size: 11px;
   font-weight: 800;
   line-height: 1.35;
   letter-spacing: .08em;
   text-transform: uppercase;
 }
-.portfolio-kicker .live-dot,
-.pricing-kicker .live-dot,
-.contact-kicker .live-dot { width: 7px; height: 7px; flex: 0 0 7px; background: #008e9a; }
-.services-intro .services-eyebrow,
-.contact-kicker {
-  border-color: rgba(0, 199, 216, .38);
-  background: rgba(0, 199, 216, .13);
-  color: #a8eaf0;
-}
-.contact-kicker .live-dot { background: #e5f52b; }
+.portfolio-kicker .live-dot { width: 7px; height: 7px; flex: 0 0 7px; background: #008e9a; }
 
 /* The header contact action must stay readable in every state. */
 .main-nav .nav-contact,
@@ -4223,7 +4185,7 @@ button.channel-box:hover, a.channel-box:hover { border-color: #00c7d8; backgroun
 /* Portfolio catalog: a divided index followed by editorial galleries. */
 .portfolio-unified-section { padding-block: clamp(76px, 8vw, 120px); }
 .portfolio-header { margin-bottom: 50px; }
-.portfolio-header h2 { font-family: 'DM Sans', sans-serif; font-weight: 800; letter-spacing: -.055em; }
+.portfolio-header h2 { font-family: 'New Rocker', Georgia, serif; font-weight: 800; letter-spacing: -.055em; }
 .portfolio-directory-heading {
   display: flex;
   justify-content: space-between;
@@ -4268,14 +4230,14 @@ button.channel-box:hover, a.channel-box:hover { border-color: #00c7d8; backgroun
 .portfolio-tab-btn:focus-visible { outline: 3px solid #008e9a; outline-offset: -4px; }
 .category-tab-number { color: #007f89; font-size: 11px; font-weight: 800; letter-spacing: .12em; }
 .portfolio-tab-btn.is-active .category-tab-number { color: #414a08; }
-.category-tab-name { font-family: 'DM Sans', sans-serif; font-size: clamp(18px, 1.8vw, 25px); font-weight: 800; line-height: 1.12; letter-spacing: -.035em; }
+.category-tab-name { font-family: 'New Rocker', Georgia, serif; font-size: clamp(18px, 1.8vw, 25px); font-weight: 800; line-height: 1.12; letter-spacing: -.035em; }
 .category-tab-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; }
 .tab-count-pill,
 .portfolio-tab-btn.is-active .tab-count-pill { padding: 0; border-radius: 0; background: transparent; color: currentColor; font-size: 11px; font-weight: 700; opacity: .72; }
 .category-tab-bottom .arrow-icon { width: 17px; height: 17px; }
 .portfolio-tab-panel { max-width: 1240px; margin: 0 auto; }
 .portfolio-panel-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin: 0 0 24px; }
-.portfolio-panel-heading h3 { max-width: 14ch; margin: 0; color: #171a1b; font-family: 'DM Sans', sans-serif; font-size: clamp(30px, 4vw, 54px); font-weight: 800; line-height: 1.05; letter-spacing: -.055em; }
+.portfolio-panel-heading h3 { max-width: 14ch; margin: 0; color: #171a1b; font-family: 'New Rocker', Georgia, serif; font-size: clamp(30px, 4vw, 54px); font-weight: 800; line-height: 1.05; letter-spacing: -.055em; }
 .portfolio-panel-heading p { max-width: 38ch; margin: 0 0 4px; color: #505b5c; font-size: 14px; line-height: 1.5; }
 .portfolio-posts-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 18px; }
 .portfolio-post-card { min-width: 0; border-radius: 0; box-shadow: none; }
@@ -4284,7 +4246,7 @@ button.channel-box:hover, a.channel-box:hover { border-color: #00c7d8; backgroun
 .post-card-media { border-radius: 0; }
 .portfolio-post-card:first-child .post-card-media { flex: 1; min-height: 0; aspect-ratio: auto; }
 .post-card-meta { padding: 13px 0 0; }
-.post-card-meta h3 { font-family: 'DM Sans', sans-serif; font-size: clamp(18px, 1.7vw, 24px); font-weight: 800; letter-spacing: -.03em; }
+.post-card-meta h3 { font-family: 'New Rocker', Georgia, serif; font-size: clamp(18px, 1.7vw, 24px); font-weight: 800; letter-spacing: -.03em; }
 .portfolio-post-card:first-child .post-card-meta h3 { font-size: clamp(24px, 2.8vw, 36px); }
 .post-card-hover-badge { color: #171a1b; background: #e5f52b; font-size: 10px; }
 .portfolio-post-card:focus-visible { outline: 3px solid #008e9a; outline-offset: 4px; }
@@ -4296,7 +4258,7 @@ button.channel-box:hover, a.channel-box:hover { border-color: #00c7d8; backgroun
 .video-reels-frame { border-radius: 0; box-shadow: none; }
 .video-reels-caption { padding: 13px 0 0; }
 .video-reels-caption span { color: #007f89; }
-.video-reels-caption h3 { color: #171a1b; font-family: 'DM Sans', sans-serif; font-size: 19px; font-weight: 800; letter-spacing: -.025em; }
+.video-reels-caption h3 { color: #171a1b; font-family: 'New Rocker', Georgia, serif; font-size: 19px; font-weight: 800; letter-spacing: -.025em; }
 .video-reels-caption p { color: #505b5c; }
 .portfolio-reels-cta-banner { max-width: none; border: 0; border-radius: 0; background: #222829; box-shadow: none; }
 .portfolio-reels-cta-banner h3 { color: #f3f4f4; }
@@ -4305,7 +4267,7 @@ button.channel-box:hover, a.channel-box:hover { border-color: #00c7d8; backgroun
 .ai-disclosure-tag { border-radius: 0; background: #006f77; }
 .identity-project-block { max-width: none; margin-bottom: 64px; }
 .identity-project-heading { margin-bottom: 20px; border-bottom-color: #aeb6b7; }
-.identity-project-heading h3 { font-family: 'DM Sans', sans-serif; font-size: clamp(24px, 2.5vw, 34px); font-weight: 800; letter-spacing: -.04em; }
+.identity-project-heading h3 { font-family: 'New Rocker', Georgia, serif; font-size: clamp(24px, 2.5vw, 34px); font-weight: 800; letter-spacing: -.04em; }
 .identity-gallery__grid--music,
 .identity-gallery__grid--marks { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 18px; }
 .identity-gallery__grid .identity-gallery__piece:first-child { grid-column: span 2; grid-row: span 2; }
@@ -4313,7 +4275,7 @@ button.channel-box:hover, a.channel-box:hover { border-color: #00c7d8; backgroun
 .identity-gallery__image { border: 0; border-radius: 0; background: #e2e6e6; }
 .identity-gallery__grid .identity-gallery__piece:first-child .identity-gallery__image { aspect-ratio: 4 / 5; }
 .identity-gallery__piece:focus-visible { outline: 3px solid #008e9a; outline-offset: 4px; }
-.identity-gallery__caption { font-family: 'DM Sans', sans-serif; font-weight: 800; }
+.identity-gallery__caption { font-family: 'New Rocker', Georgia, serif; font-weight: 800; }
 @media (max-width: 1000px) {
   .portfolio-category-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .portfolio-tab-btn:nth-child(2) { border-right: 0; }
