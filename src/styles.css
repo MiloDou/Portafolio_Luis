@@ -6,8 +6,16 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand-Variable.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
 :root {
-  font-family: 'New Rocker', Georgia, serif;
+  font-family: 'Quicksand', Arial, sans-serif;
   color: #191919;
   background: #ffffff;
   font-synthesis: none;
@@ -557,17 +565,29 @@ img { display: block; max-width: 100%; }
 .hero-art-stage {
   position: absolute;
   inset: 104px var(--edge) 80px 54%;
-  overflow: hidden;
+  overflow: visible;
   z-index: 1;
-  background: #01e7f5;
+  background: transparent;
   pointer-events: none;
 }
 .hero-art-frame {
   position: absolute;
-  inset: -2% 0 -5% 0;
+  inset: 8px 8px 14px 8px;
   display: grid;
   place-items: center;
   animation: art-arrive 1s cubic-bezier(0.16,1,0.3,1) both;
+}
+.hero-art.hero-art--cover {
+  width: 100%;
+  height: 100%;
+  padding: clamp(8px, 1.2vw, 18px);
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
+  border: 1px solid #171a1b;
+  border-radius: 22px;
+  box-shadow: 6px 6px 0 #171a1b;
+  transform: none;
 }
 .hero-art {
   position: relative;
@@ -3926,8 +3946,8 @@ html { scrollbar-color: #00aebe #e7e9e9; }
 .button { border-radius: 8px; }
 .button--dark { background: #171a1b; box-shadow: 0 8px 18px rgba(15, 20, 21, .13); }
 .button--dark:hover { background: #303738; }
-.button--whatsapp { background: #007f89; box-shadow: 0 8px 20px rgba(0, 95, 103, .2); }
-.button--whatsapp:hover { background: #00666e; }
+.button--whatsapp { color: #171a1b; background: #ff2a91; box-shadow: 0 8px 20px rgba(151, 14, 81, .22); }
+.button--whatsapp:hover { color: #171a1b; background: #ff5eac; }
 .hero-branch-card {
   margin-top: 34px;
   max-width: 560px;
@@ -3939,7 +3959,7 @@ html { scrollbar-color: #00aebe #e7e9e9; }
 .branch-card-eyebrow { color: #007f89; font-size: 10px; letter-spacing: .1em; }
 .branch-card-btn { border-radius: 7px; background: #e5f52b; }
 .hero-art-stage { inset: 100px var(--edge) 74px 59%; }
-.hero-art-frame { background: #171a1b; border: 1px solid #171a1b; border-radius: 16px; box-shadow: 0 24px 60px rgba(15, 20, 21, .18); }
+.hero-art-frame { background: transparent; border: 0; border-radius: 0; box-shadow: none; }
 .hero-art-badge { background: #171a1b; border-radius: 8px; }
 .hero-scroll-prompt { color: #4b5354; }
 
@@ -4138,7 +4158,7 @@ button.channel-box:hover, a.channel-box:hover { border-color: #00c7d8; backgroun
   border-radius: 999px;
   background: #dff5f5;
   color: #075c63;
-  font-family: 'New Rocker', Georgia, serif;
+  font-family: 'Quicksand', Arial, sans-serif;
   font-size: 11px;
   font-weight: 800;
   line-height: 1.35;
@@ -4152,10 +4172,10 @@ button.channel-box:hover, a.channel-box:hover { border-color: #00c7d8; backgroun
 .main-nav .nav-contact:hover,
 .main-nav .nav-contact:focus-visible {
   color: #171a1b;
-  background: #e5f52b;
-  border-color: #c7d414;
+  background: #ff2a91;
+  border-color: #d81972;
 }
-.main-nav .nav-contact:hover { background: #f0ff45; }
+.main-nav .nav-contact:hover { background: #ff5eac; }
 
 /* Primary contact action has the strongest weight in the section. */
 .contact-primary-cta { display: flex; justify-content: center; }

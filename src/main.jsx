@@ -351,7 +351,7 @@ function Header({ currentBranch, onNavigateBranch }) {
         <span className="brand-dot"><img src="/assets/witchu-logo.png" alt="Witchu logo" /></span>
         <span className="brand-text">
           <strong>Witchu - Portafolio Artístico</strong>
-          <small>LUIS GÓMEZ · DISEÑO, VIDEO E ILUSTRACIÓN</small>
+          <small>LUIS GÓMEZ · DISEÑO, PUBLICIDAD E ILUSTRACIÓN</small>
         </span>
       </a>
 
@@ -545,18 +545,14 @@ function Hero({ onOpenIllustration }) {
 
       </div>
 
-      {/* Retrato de Luis Gómez */}
+      {/* Ilustración de portada de Witchu */}
       <div className="hero-art-stage">
         <div className="hero-art-frame">
           <img
-            src="/assets/foto-inicio-luis.webp"
-            alt="Retrato de Luis Gómez, diseñador gráfico y creativo detrás de Witchu"
-            className="hero-art hero-art--photo"
+            src="/assets/ilustracion-personaje.png"
+            alt="Ilustración de Witchu: personaje rosado de expresión intensa y lengua morada"
+            className="hero-art hero-art--cover"
           />
-          <div className="hero-art-badge">
-            <span className="badge-name">LUIS GÓMEZ</span>
-            <small>CREATIVO · WITCHU</small>
-          </div>
         </div>
       </div>
 
@@ -1161,7 +1157,7 @@ function Pricing() {
         {/* APARTADO DE CONDICIONES REQUERIDO */}
         <div className="pricing-conditions-block">
           <div className="conditions-header">
-            <h4>Condiciones del servicio:</h4>
+            <h4>Nota de términos y condiciones</h4>
             <p>Transparencia total para garantizar un flujo de trabajo ordenado y resultados óptimos:</p>
           </div>
           <ul className="conditions-list">
