@@ -408,7 +408,6 @@ function Header({ currentBranch, onNavigateBranch }) {
 function InteractiveCover({ onEnter }) {
   const coverRef = useRef(null);
   const [leaving, setLeaving] = useState(false);
-  const [prompt, setPrompt] = useState(false);
 
   const finish = () => {
     if (leaving) return;
@@ -421,11 +420,7 @@ function InteractiveCover({ onEnter }) {
     document.body.classList.add('has-interactive-cover');
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-    const timer = window.setTimeout(() => {
-      setPrompt(true);
-    }, 12000);
     return () => {
-      window.clearTimeout(timer);
       document.documentElement.classList.remove('has-interactive-cover');
       document.body.classList.remove('has-interactive-cover');
       document.body.style.overflow = previousOverflow;
@@ -443,15 +438,15 @@ function InteractiveCover({ onEnter }) {
     const proximity = Math.max(0, 1 - Math.sqrt(dx * dx + dy * dy));
     const eyeRangeX = Math.min(20, Math.max(8, bounds.width * 0.012));
     const eyeRangeY = Math.min(14, Math.max(6, bounds.height * 0.012));
-    cover.style.setProperty('--jaw-up', `${-(proximity * 10).toFixed(1)}%`);
-    cover.style.setProperty('--jaw-down', `${(proximity * 13).toFixed(1)}%`);
+    cover.style.setProperty('--jaw-up', `${-(6 + proximity * 10).toFixed(1)}%`);
+    cover.style.setProperty('--jaw-down', `${(8 + proximity * 13).toFixed(1)}%`);
     cover.style.setProperty('--eye-x', `${((x - 0.5) * eyeRangeX * 2).toFixed(1)}px`);
     cover.style.setProperty('--eye-y', `${((y - 0.5) * eyeRangeY * 2).toFixed(1)}px`);
   };
 
   const resetPointer = () => {
-    coverRef.current?.style.setProperty('--jaw-up', '0%');
-    coverRef.current?.style.setProperty('--jaw-down', '0%');
+    coverRef.current?.style.setProperty('--jaw-up', '-6%');
+    coverRef.current?.style.setProperty('--jaw-down', '8%');
     coverRef.current?.style.setProperty('--eye-x', '0px');
     coverRef.current?.style.setProperty('--eye-y', '0px');
   };
@@ -470,23 +465,25 @@ function InteractiveCover({ onEnter }) {
       <div className="cover-fill cover-fill--left" aria-hidden="true" />
       <div className="cover-fill cover-fill--right" aria-hidden="true" />
       <div className="cover-border" aria-hidden="true" />
+      <span className="cover-sideword cover-sideword--left" aria-hidden="true">WITCHU</span>
+      <span className="cover-sideword cover-sideword--right" aria-hidden="true">PORTAFOLIO</span>
       <div className="cover-artboard">
         <img className="cover-background" src="/assets/intro/background-hole.png" alt="" aria-hidden="true" />
         <img className="cover-jaw cover-jaw--top" src="/assets/intro/jaw-top-clear.png" alt="" aria-hidden="true" />
         <img className="cover-jaw cover-jaw--bottom" src="/assets/intro/jaw-bottom-clear.png" alt="" aria-hidden="true" />
         <img className="cover-eyes" src="/assets/intro/pupils.png" alt="" aria-hidden="true" />
-        {prompt && (
-          <div className="cover-prompt-art" role="status">
-            <img src="/assets/intro/prompt.png" alt="¿Y si entras en mi boca ya?" />
-          </div>
-        )}
         <button
           className="cover-mouth-hitbox"
           type="button"
           onClick={finish}
           aria-label="Abrir la boca y entrar al portafolio de Luis Gómez"
-        />
+        >
+          <span className="cover-mouth-name">Luis Gómez</span>
+          <span className="cover-mouth-kind">Portafolio</span>
+          <span className="cover-mouth-action">Entrar <span aria-hidden="true">↗</span></span>
+        </button>
       </div>
+      <span className="cover-discipline" aria-hidden="true">ARTE &amp; DISEÑO</span>
     </div>
   );
 }
@@ -545,12 +542,12 @@ function Hero({ onOpenIllustration }) {
 
       </div>
 
-      {/* Ilustración de portada de Witchu */}
+      {/* Retrato de Luis Gómez */}
       <div className="hero-art-stage">
         <div className="hero-art-frame">
           <img
-            src="/assets/ilustracion-personaje.png"
-            alt="Ilustración de Witchu: personaje rosado de expresión intensa y lengua morada"
+            src="/assets/foto-inicio-luis.webp"
+            alt="Retrato de Luis Gómez, diseñador gráfico y creativo detrás de Witchu"
             className="hero-art hero-art--cover"
           />
         </div>
@@ -788,10 +785,6 @@ function Portfolio() {
   return (
     <section className="portfolio-unified-section reveal-section" id="portafolio">
       <div className="portfolio-header">
-        <div className="portfolio-kicker">
-          <span className="live-dot" />
-          <span>PORTAFOLIO DE PROYECTOS SELECCIONADOS</span>
-        </div>
         <h2>Mi trabajo</h2>
         <p>
           Una selección de piezas para redes, video, marcas e ilustración. Elige una categoría para recorrer el trabajo.
