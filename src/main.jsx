@@ -407,7 +407,6 @@ function Header({ currentBranch, onNavigateBranch }) {
 // SECCIÓN 0: PORTADA INTERACTIVA
 function InteractiveCover({ onEnter }) {
   const coverRef = useRef(null);
-  const enterButtonRef = useRef(null);
   const [leaving, setLeaving] = useState(false);
   const [prompt, setPrompt] = useState(false);
 
@@ -418,7 +417,6 @@ function InteractiveCover({ onEnter }) {
   };
 
   useEffect(() => {
-    enterButtonRef.current?.focus();
     document.documentElement.classList.add('has-interactive-cover');
     document.body.classList.add('has-interactive-cover');
     const previousOverflow = document.body.style.overflow;
@@ -483,7 +481,6 @@ function InteractiveCover({ onEnter }) {
           </div>
         )}
         <button
-          ref={enterButtonRef}
           className="cover-mouth-hitbox"
           type="button"
           onClick={finish}
