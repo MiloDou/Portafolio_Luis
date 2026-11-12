@@ -17,4 +17,8 @@ npm run preview
 ```
 
 `npm run build` genera la carpeta `dist/`. El sitio es estático y está preparado para Netlify o Vercel. Los videos incluyen soporte de HTTP Range para permitir avanzar en la reproducción.
+
+## Cloudflare Workers
+
+`bun install` ejecuta el script `postinstall` y genera `dist/` antes del despliegue. `wrangler.jsonc` publica solo esa carpeta, con el nombre `portafolio-luis-gomez`. En Workers Builds, el comando de despliegue puede seguir siendo `npx wrangler deploy`.
 # Portafolio_Luis

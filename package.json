@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "node server.mjs",
     "build": "node build.mjs",
-    "preview": "node server.mjs --dist"
+    "postinstall": "node build.mjs",
+    "preview": "node server.mjs --dist",
+    "deploy": "npm run build && npx wrangler deploy"
   }
 }
