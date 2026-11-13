@@ -438,15 +438,17 @@ function InteractiveCover({ onEnter }) {
     const proximity = Math.max(0, 1 - Math.sqrt(dx * dx + dy * dy));
     const eyeRangeX = Math.min(20, Math.max(8, bounds.width * 0.012));
     const eyeRangeY = Math.min(14, Math.max(6, bounds.height * 0.012));
-    cover.style.setProperty('--jaw-up', `${-(6 + proximity * 10).toFixed(1)}%`);
-    cover.style.setProperty('--jaw-down', `${(8 + proximity * 13).toFixed(1)}%`);
+    cover.style.setProperty('--jaw-up', `${-(9 + proximity * 8).toFixed(1)}%`);
+    cover.style.setProperty('--jaw-down', `${(12 + proximity * 10).toFixed(1)}%`);
+    cover.style.setProperty('--mouth-scale', (0.95 + proximity * 0.2).toFixed(2));
     cover.style.setProperty('--eye-x', `${((x - 0.5) * eyeRangeX * 2).toFixed(1)}px`);
     cover.style.setProperty('--eye-y', `${((y - 0.5) * eyeRangeY * 2).toFixed(1)}px`);
   };
 
   const resetPointer = () => {
-    coverRef.current?.style.setProperty('--jaw-up', '-6%');
-    coverRef.current?.style.setProperty('--jaw-down', '8%');
+    coverRef.current?.style.setProperty('--jaw-up', '-9%');
+    coverRef.current?.style.setProperty('--jaw-down', '12%');
+    coverRef.current?.style.setProperty('--mouth-scale', '0.95');
     coverRef.current?.style.setProperty('--eye-x', '0px');
     coverRef.current?.style.setProperty('--eye-y', '0px');
   };
@@ -476,9 +478,11 @@ function InteractiveCover({ onEnter }) {
           onClick={finish}
           aria-label="Abrir la boca y entrar al portafolio de Luis Gómez"
         >
-          <span className="cover-mouth-name">Luis Gómez</span>
-          <span className="cover-mouth-kind">Portafolio</span>
-          <span className="cover-mouth-action">Entrar <span aria-hidden="true">↗</span></span>
+          <span className="cover-mouth-content">
+            <span className="cover-mouth-name">Luis Gómez</span>
+            <span className="cover-mouth-kind">Portafolio</span>
+            <span className="cover-mouth-action">Entrar <span aria-hidden="true">↗</span></span>
+          </span>
         </button>
       </div>
     </div>

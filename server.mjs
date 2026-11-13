@@ -56,6 +56,7 @@ const contentTypes = {
   '.ico': 'image/x-icon',
   '.woff2': 'font/woff2',
   '.woff': 'font/woff',
+  '.ttf': 'font/ttf',
   '.mp4': 'video/mp4'
 };
 
@@ -74,7 +75,7 @@ const server = createServer(async (request, response) => {
   }
 
   const relativePath = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '');
-  const isPublicAsset = !isDist && /^(assets|vendor)\//.test(relativePath);
+  const isPublicAsset = !isDist && /^(assets|fonts|vendor)\//.test(relativePath);
   const filePath = isPublicAsset
     ? resolve(projectRoot, 'public', relativePath)
     : resolve(root, relativePath);
