@@ -166,36 +166,6 @@ img { display: block; max-width: 100%; }
   border: 1px solid #171717;
   pointer-events: none;
 }
-.cover-sideword {
-  position: absolute;
-  z-index: 6;
-  top: 50%;
-  color: #171717;
-  font-family: 'New Rocker', Georgia, serif;
-  font-size: clamp(22px, 3.2vw, 52px);
-  line-height: 1;
-  letter-spacing: .12em;
-  text-orientation: upright;
-  writing-mode: vertical-rl;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-.cover-sideword--left { left: clamp(12px, 5vw, 84px); }
-.cover-sideword--right { right: clamp(12px, 5vw, 84px); }
-.cover-discipline {
-  position: absolute;
-  z-index: 6;
-  bottom: clamp(22px, 5vh, 62px);
-  left: 50%;
-  color: #171717;
-  font-family: 'Quicksand', Arial, sans-serif;
-  font-size: clamp(12px, 1.2vw, 18px);
-  font-weight: 700;
-  letter-spacing: .28em;
-  white-space: nowrap;
-  transform: translateX(-50%);
-  pointer-events: none;
-}
 .cover-artboard {
   position: absolute;
   top: 50%;
@@ -246,10 +216,13 @@ img { display: block; max-width: 100%; }
   justify-content: center;
   gap: clamp(2px, .4vw, 7px);
   padding: 0;
-  border: 0;
-  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, .26);
+  border-radius: 999px;
   color: #fff;
-  background: transparent;
+  background: rgba(0, 0, 0, .6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 28px 8px rgba(0, 0, 0, .42), inset 0 0 16px rgba(0, 0, 0, .4);
   pointer-events: auto;
   cursor: pointer;
   text-align: center;
@@ -278,7 +251,7 @@ img { display: block; max-width: 100%; }
 }
 .cover-mouth-hitbox:hover .cover-mouth-action,
 .cover-mouth-hitbox:focus-visible .cover-mouth-action { color: #ff5eac; }
-.cover-mouth-hitbox:focus-visible { outline: 2px dashed #171717; outline-offset: -5px; }
+.cover-mouth-hitbox:focus-visible { outline: 3px solid #e5f52b; outline-offset: 4px; }
 .interactive-cover.is-leaving { opacity: 0; visibility: hidden; }
 .interactive-cover.is-leaving .cover-jaw--top { transform: translateY(-115vh) rotate(-3deg); }
 .interactive-cover.is-leaving .cover-jaw--bottom { transform: translateY(115vh) rotate(3deg); }
@@ -2590,10 +2563,6 @@ img { display: block; max-width: 100%; }
     --artboard-w: min(180vw, 177.778svh);
     --artboard-h: min(101.25vw, 100svh);
   }
-  .cover-sideword { font-size: clamp(17px, 5vw, 30px); letter-spacing: .04em; }
-  .cover-sideword--left { left: 8px; }
-  .cover-sideword--right { right: 8px; }
-  .cover-discipline { bottom: 9vh; font-size: 11px; letter-spacing: .17em; }
   .illustration-section { padding-block: 80px; }
   .illustration-heading, .illustration-commission { align-items: start; flex-direction: column; }
   .header-status-pill { display: none; }

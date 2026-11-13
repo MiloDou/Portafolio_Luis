@@ -465,8 +465,6 @@ function InteractiveCover({ onEnter }) {
       <div className="cover-fill cover-fill--left" aria-hidden="true" />
       <div className="cover-fill cover-fill--right" aria-hidden="true" />
       <div className="cover-border" aria-hidden="true" />
-      <span className="cover-sideword cover-sideword--left" aria-hidden="true">WITCHU</span>
-      <span className="cover-sideword cover-sideword--right" aria-hidden="true">PORTAFOLIO</span>
       <div className="cover-artboard">
         <img className="cover-background" src="/assets/intro/background-hole.png" alt="" aria-hidden="true" />
         <img className="cover-jaw cover-jaw--top" src="/assets/intro/jaw-top-clear.png" alt="" aria-hidden="true" />
@@ -483,7 +481,6 @@ function InteractiveCover({ onEnter }) {
           <span className="cover-mouth-action">Entrar <span aria-hidden="true">↗</span></span>
         </button>
       </div>
-      <span className="cover-discipline" aria-hidden="true">ARTE &amp; DISEÑO</span>
     </div>
   );
 }
